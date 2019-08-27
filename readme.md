@@ -18,8 +18,16 @@ php composer.phar install
 
 ### Running the application
 
+**Web**
+
 ```
 php -S 0.0.0.0:8080 -t public/
+```
+
+**Console**
+
+```
+php src/UI/console.php app:weekly-report
 ```
 
 ### Api

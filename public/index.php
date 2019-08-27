@@ -12,7 +12,7 @@ use App\Infrastructure\RepositoryFactory;
 /**
  * Register The Auto Loader
  */
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 /**
  * Set header
@@ -23,11 +23,8 @@ header('Access-Control-Allow-Origin: *');
 /**
  * Run The Client Application
  */
-
 $orderService = new OrderService(
     RepositoryFactory::create('Cloud')
 );
-
 $data = $orderService->weeklyRevenue();
-
 echo json_encode($data);
